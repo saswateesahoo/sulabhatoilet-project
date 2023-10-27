@@ -72,27 +72,17 @@ import SaveButton from '../components/atoms/SaveButton';
 
 const AddToiletPage = () => {
   return (
-    <ScrollView >
+    <ScrollView>
       {/* <View style={{ backgroundColor: 'white', flexDirection: 'column' }}> */}
         {/* <View style={{ backgroundColor: 'lightblue' }}> */}
           <Superhero />
         {/* </View> */}
-        {/* <View style={{ backgroundColor: 'lightcoral' }}>
           <BasicInformation />
-        </View>
-        <View style={{ backgroundColor: 'lightgreen' }}>
-          <AccessInfo />
-        </View>
-        <View style={{ backgroundColor: 'lightgrey' }}>
-          <WomenCentricServices />
-        </View>
-        <View style={{ backgroundColor: 'lightyellow' }}>
-          <AmmenitiesAvailable />
-        </View>
-        <View style={{ backgroundColor: 'lightpink' }}>
-          <PhotoUpload />
-        </View>
-        <View style={{ backgroundColor: 'lightseagreen' }}>
+          {/* <AccessInfo /> */}
+          {/* <WomenCentricServices /> */}
+          {/* <AmmenitiesAvailable /> */}
+          {/* <PhotoUpload /> */}
+        {/* <View style={{ backgroundColor: 'lightseagreen' }}>
           <SaveButton />
         </View> */}
       {/* </View> */}
