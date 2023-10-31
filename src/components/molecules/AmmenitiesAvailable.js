@@ -1,9 +1,9 @@
-import React,{useState} from 'react';
-import { View, Text,StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import InputComponent from '../atoms/InputComponent';
 
 
-const  AmmenitiesAvailable = () => {
+const AmmenitiesAvailable = () => {
   const [AmmenitiesAvailable, setAmmenitiesAvailable] = useState('');
   const [ParkingFacility, setParkingFacility] = useState('');
   const [ShoppingMall, setShoppingMall] = useState('');
@@ -12,7 +12,7 @@ const  AmmenitiesAvailable = () => {
   const [FoodOutlets, setFoodOutlets] = useState('');
   const [ShowerRooms, setShowerRooms] = useState('');
   return (
-    <View>
+    <View style={{backgroundColor: 'white'}}>
       <View style={styles.AmmenitiesAvailableContainer}>
         <Text style={styles.AmmenitiesAvailableText}>Ammenities Available</Text>
         <InputComponent
@@ -21,16 +21,16 @@ const  AmmenitiesAvailable = () => {
           onChangeText={setAmmenitiesAvailable}
         />
       </View>
-      <View style={styles. ParkingFacilityContainer}>
-        <Text style={styles. ParkingFacilityText}> Parking Facility</Text>
+      <View style={styles.ParkingFacilityContainer}>
+        <Text style={styles.ParkingFacilityText}> Parking Facility</Text>
         <InputComponent
           placeholder=" "
           value={ParkingFacility}
           onChangeText={setParkingFacility}
         />
       </View>
-       <View style={styles. ShoppingMallContainer}>
-        <Text style={styles. ShoppingMallText}>Shopping Mall</Text>
+      <View style={styles.ShoppingMallContainer}>
+        <Text style={styles.ShoppingMallText}>Shopping Mall</Text>
         <InputComponent
           placeholder=" "
           value={ShoppingMall}
@@ -52,49 +52,52 @@ const  AmmenitiesAvailable = () => {
           value={EVChargingUnit}
           onChangeText={setEVChargingUnit}
         />
-       </View> 
-       <View style={styles.FoodOutletsContainer}>
+      </View>
+      <View style={styles.FoodOutletsContainer}>
         <Text style={styles.FoodOutletsText}>Food Outlets</Text>
         <InputComponent
           placeholder=" "
           value={FoodOutlets}
           onChangeText={setFoodOutlets}
         />
-       </View> 
-       <View style={styles.ShowerRoomsContainer}>
+      </View>
+      <View style={styles.ShowerRoomsContainer}>
         <Text style={styles.ShowerRoomsText}>Shower Rooms</Text>
         <InputComponent
           placeholder=" "
           value={ShowerRooms}
           onChangeText={setShowerRooms}
         />
-       </View> 
+      </View>
     </View>
   );
 };
 const styles = StyleSheet.create({
-    AmmenitiesAvailableContainer:{
-    width: 94,
-    height: 36,
-    top: 310, 
-    left: 30, 
-    backgroundColor: 'white',
-    position: 'absolute',
+  AmmenitiesAvailableContainer: {
+    // width: 94,
+    // height: 36,
+    // top: 310, 
+    // left: 30, 
+    // backgroundColor: 'white',
+    // position: 'absolute',
    
   },
   AmmenitiesAvailableText:{
     color: 'black',
-    fontSize: 9.3,
+    fontSize: 14,
     fontWeight: '400',
-    fontWeight: "normal",
     letterSpacing: 0.02,
     textAlign: 'left',
+    // top: 10,
+    // left: -10,
+    top:-80,
+    left:12,
   },
   ParkingFacilityContainer:{
     width: 13,
     height: 13,
-    top: 336, 
-    left: 30, 
+    top: -56, 
+    left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -105,8 +108,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 9,
-    fontWeight: '400',
+    fontSize: 12,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -114,7 +117,7 @@ const styles = StyleSheet.create({
   ShoppingMallContainer:{
     width: 13,
     height: 13,
-    top: 336, 
+    top: -56, 
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -126,8 +129,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 8.3,
-    fontWeight: '400',
+    fontSize: 12,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -135,8 +138,8 @@ const styles = StyleSheet.create({
   DrinkingWaterContainer:{
     width: 13,
     height: 13,
-    top: 360, 
-    left: 30, 
+    top: -36, 
+    left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -147,8 +150,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 9,
-    fontWeight: '400',
+    fontSize: 12,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -156,7 +159,7 @@ const styles = StyleSheet.create({
   EVChargingUnitContainer:{
     width: 13,
     height: 13,
-    top: 360, 
+    top: -35, 
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -168,8 +171,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 9,
-    fontWeight: '275',
+    fontSize: 11,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -177,8 +180,8 @@ const styles = StyleSheet.create({
   FoodOutletsContainer:{
     width: 13,
     height: 13,
-    top: 379, 
-    left: 30, 
+    top: -20, 
+    left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -189,8 +192,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 9,
-    fontWeight: '400',
+    fontSize: 12,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -198,7 +201,7 @@ const styles = StyleSheet.create({
   ShowerRoomsContainer:{
     width: 13,
     height: 13,
-    top: 379, 
+    top: -20, 
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -210,8 +213,8 @@ const styles = StyleSheet.create({
     top: -1, 
     left: 19, 
     color: 'black',
-    fontSize: 9,
-    fontWeight: '400',
+    fontSize: 12,
+    fontWeight: '300',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',

@@ -11,26 +11,28 @@ const WomenCentricServices = () => {
   const [ChangingRoom, setChangingRoom] = useState('');
   
   return (
-    <View>
+    <View style={{backgroundColor: 'white'}}>
       {/* <Text style={styles.WomenCentricServicesText}>Women Centric Services</Text> */}
       <View style={styles.WomenCentricServicesContainer}>
-        <Text style={styles.WomenCentricServicesText}>Women Centric Services</Text>
+        <Text style={styles.WomenCentricServicesText}>
+          Women Centric Services
+        </Text>
         <InputComponent
           placeholder=" "
           value={WomenCentricServices}
           onChangeText={setWomenCentricServices}
         />
       </View>
-      <View style={styles. SanitaryPadBinContainer}>
-        <Text style={styles. SanitaryPadBinText}> Sanitary Pad Bin</Text>
+      <View style={styles.SanitaryPadBinContainer}>
+        <Text style={styles.SanitaryPadBinText}> Sanitary Pad Bin</Text>
         <InputComponent
           placeholder=" "
-          value={ SanitaryPadBin}
+          value={SanitaryPadBin}
           onChangeText={setSanitaryPadBin}
         />
       </View>
-      <View style={styles. CanBuySanitaryPadContainer}>
-        <Text style={styles. CanBuySanitaryPadText}> Can Buy Sanitary Pad</Text>
+      <View style={styles.CanBuySanitaryPadContainer}>
+        <Text style={styles.CanBuySanitaryPadText}> Can Buy Sanitary Pad</Text>
         <InputComponent
           placeholder=" "
           value={CanBuySanitaryPad}
@@ -45,8 +47,8 @@ const WomenCentricServices = () => {
           onChangeText={setBabyFeedingRoom}
         />
       </View>
-      <View style={styles. ChangingRoomContainer}>
-        <Text style={styles. ChangingRoomText}>Changing Room</Text>
+      <View style={styles.ChangingRoomContainer}>
+        <Text style={styles.ChangingRoomText}>Changing Room</Text>
         <InputComponent
           placeholder=" "
           value={ChangingRoom}
@@ -58,29 +60,32 @@ const WomenCentricServices = () => {
 };
 const styles = StyleSheet.create({
 WomenCentricServicesContainer:{
-    width: 94,
-    height: 36,
-    top: 640, 
-    left: -160, 
-    backgroundColor: 'white',
-    position: 'absolute',
+    // width: 94,
+    // height: 36,
+    // top: 640, 
+    // left: -160, 
+    // backgroundColor: 'white',
+    // position: 'absolute',
    
   },
   WomenCentricServicesText:{
     color: 'black',
-    fontSize: 8.3,
+    fontSize: 14,
     fontWeight: '400',
     letterSpacing: 0.02,
     textAlign: 'left',
+    top: -70,
+    left:12,
     // lineHeight:0,
   },
   SanitaryPadBinContainer:{
     width: 13,
     height: 13,
-    top: 666, 
-    left: -160, 
+    top: -30, 
+    left: 10, 
     borderWidth: 1,
-    background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
     position: 'absolute',
   },
@@ -90,7 +95,7 @@ WomenCentricServicesContainer:{
     left: 19, 
     color: 'black',
     fontSize: 9,
-    fontWeight: '300',
+    fontWeight: '400',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',
@@ -98,8 +103,8 @@ WomenCentricServicesContainer:{
   CanBuySanitaryPadContainer:{
     width: 13,
     height: 13,
-    top: 666, 
-    left: -55, 
+    top: -29, 
+    left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -119,8 +124,8 @@ WomenCentricServicesContainer:{
   BabyFeedingRoomContainer:{
     width: 13,
     height: 13,
-    top: 690, 
-    left: -160, 
+    top: -10, 
+    left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -140,8 +145,8 @@ WomenCentricServicesContainer:{
   ChangingRoomContainer:{
     width: 13,
     height: 13,
-    top: 690, 
-    left: -55, 
+    top: -10, 
+    left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
@@ -153,7 +158,7 @@ WomenCentricServicesContainer:{
     left: 19, 
     color: 'black',
     fontSize: 9,
-    fontWeight: '300',
+    fontWeight: '400',
     letterSpacing: 0.02,
     textAlign: 'left',
     position: 'absolute',

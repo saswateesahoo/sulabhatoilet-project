@@ -5,8 +5,8 @@ const Superhero = () => {
     <View style={styles.container}>
       <View style={styles.imageBox}>
       <Image
-        source={require('../assets/superhero.jpg')}
-        style={styles.additionalImage}
+          source={require('../assets/superhero.jpg')}
+          style={styles.additionalImage}
       />
       </View>
    
@@ -23,9 +23,9 @@ const Superhero = () => {
 const styles = StyleSheet.create({
   container: {
     // flex: 1
-      flexDirection: 'row',
-      alignItems: 'center',
-      gap: 4
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 4,
   },
 
   imageBox: {

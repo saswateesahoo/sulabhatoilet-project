@@ -1,11 +1,11 @@
 import { Input } from '@rneui/themed';
 
-const InputComponent = ({placeholder,value,onChangeText}) => {
+const InputComponent = ({placeholder, value, onChangeText}) => {
   return (
     <Input 
-          placeholder={placeholder}
-          value={value}
-          onChangeText={onChangeText}
+      placeholder={placeholder}
+      value={value}
+      onChangeText={onChangeText}
         />
   )
 }

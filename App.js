@@ -280,13 +280,13 @@
 
 
 import React from 'react';
-import { SafeAreaView,StatusBar, Text, StyleSheet } from 'react-native';
+import {SafeAreaView, StatusBar, Text, StyleSheet} from 'react-native';
 import AddToiletPage from './src/screen/AddToiletPage'; 
 
 const App = () => {
   return (
     <SafeAreaView>
-      <StatusBar backgroundColor='white'barStyle='dark-content'/>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <AddToiletPage />
     </SafeAreaView>
   );

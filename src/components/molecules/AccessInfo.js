@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
 import InputComponent from '../atoms/InputComponent';
 
 const AccessInfo = () => {
+  // eslint-disable-next-line no-shadow
   const [AccessInfo, setAccessInfo] = useState('');
   const [PaymentInfo, setPaymentInfo] = useState('');
   const [Free, setFree] = useState('');
@@ -13,10 +14,11 @@ const AccessInfo = () => {
   const [Closed, setClosed] = useState('');
   
   return (
-    <View>
+    // eslint-disable-next-line react-native/no-inline-styles
+    <View style={{backgroundColor: 'white'}}>
       {/* <Text style={styles.AccessInfoText}>Access Info</Text> */}
       <View style={styles.AccessInfoContainer}>
-        <Text style={styles. AccessInfoText}>Access Info</Text>
+        <Text style={styles.AccessInfoText}>Access Info</Text>
         <InputComponent
           placeholder=" "
           value={AccessInfo}
@@ -31,21 +33,13 @@ const AccessInfo = () => {
           onChangeText={setPaymentInfo}
         />
       </View>
-      <View style={styles. FreeContainer}>
-        <Text style={styles. FreeText}> Free</Text>
-        <InputComponent
-          placeholder=" "
-          value={ Free}
-          onChangeText={setFree}
-        />
+      <View style={styles.FreeContainer}>
+        <Text style={styles.FreeText}> Free</Text>
+        <InputComponent placeholder=" " value={Free} onChangeText={setFree} />
       </View>
       <View style={styles.PaidContainer}>
         <Text style={styles.PaidText}>Paid</Text>
-        <InputComponent
-          placeholder=" "
-          value={Paid}
-          onChangeText={setPaid}
-        />
+        <InputComponent placeholder=" " value={Paid} onChangeText={setPaid} />
       </View>
       <View style={styles.AccessRestrictionsContainer}>
         <Text style={styles.AccessRestrictionsText}>Access Restrictions</Text>
@@ -55,11 +49,11 @@ const AccessInfo = () => {
           onChangeText={setAccessRestrictions}
         />
       </View>
-      <View style={styles. OpenforAllContainer}>
-        <Text style={styles. OpenforAllText}> Open for All</Text>
+      <View style={styles.OpenforAllContainer}>
+        <Text style={styles.OpenforAllText}> Open for All</Text>
         <InputComponent
           placeholder=" "
-          value={ OpenforAll}
+          value={OpenforAll}
           onChangeText={setOpenforAll}
         />
       </View>
@@ -85,161 +79,163 @@ const AccessInfo = () => {
   );
 };
 const styles = StyleSheet.create({
-    // container: {
-    //   flex: 1,
-    //   alignItems: 'center',
-    //   justifyContent: 'center',
-    // },
-    AccessInfoContainer: {
-        width: 94,
-        // height: 36,
-        top: 488, 
-        left: 20, 
-        backgroundColor: 'white',
-        position: 'absolute',
-      },
-      AccessInfoText: {
-        color: 'black',
-        fontSize: 14,
-        fontWeight: '400',
-        fontWeight: "bold",
-        letterSpacing: 0.02,
-        textAlign: 'left',
-      },
-      PaymentInfoContainer: {
-        width: 94,
-        // height: 36,
-        top: 520, 
-        left: 20, 
-        backgroundColor: 'white',
-        position: 'absolute',
-      },
-      PaymentInfoText: {
-        color: 'black',
-        fontSize: 12,
-        fontWeight: '400',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-      },
-      FreeContainer: {
-        width: 13,
-        height: 13,
-        top: 560, 
-        left: 20, 
-        borderWidth: 1,
-        background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-        borderColor: '#EEEEEE',
-        position: 'absolute',
-      },
-      FreeText: {
-        width: 88,
-        top: -4, 
-        left: 19, 
-        color: 'black',
-        fontSize: 12,
-        fontWeight: '200',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-        position: 'absolute',
-      },
-      PaidContainer:{
-        width: 12,
-        height: 13,
-        top: 560, 
-        left: 100, 
-        borderWidth: 1,
-        background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-        borderColor: '#EEEEEE',
-        position: 'absolute',
-      },
-      PaidText:{
-        width: 88,
-        top: -4, 
-        left: 19, 
-        color: 'black',
-        fontSize: 12,
-        fontWeight: '200',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-        position: 'absolute',
-      },
-      AccessRestrictionsContainer:{
-        width: 94,
-        // height: 36,
-        top: 582, 
-        left: 20, 
-        backgroundColor: 'white',
-        position: 'absolute',
-      },
-      AccessRestrictionsText:{
-        color: 'black',
-        fontSize: 10,
-        fontWeight: '500',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-      },
-      OpenforAllContainer:{
-        width: 13,
-        height: 13,
-        top: 610, 
-        left: 20, 
-        borderWidth: 1,
-        background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-        borderColor: '#EEEEEE',
-        position: 'absolute',
-      },
-      OpenforAllText:{
-        width: 88,
-        top: -2, 
-        left: 19, 
-        color: 'black',
-        fontSize: 12,
-        fontWeight: '400',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-        position: 'absolute',
-      },
-      RestrictedAccessContainer:{
-        width: 13,
-        height: 13,
-        top: 612, 
-        left: 120, 
-        borderWidth: 1,
-        background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-        borderColor: '#EEEEEE',
-        position: 'absolute',
-      },
-      RestrictedAccessText:{
-        width: 88,
-        top: -2, 
-        left: 19, 
-        color: 'black',
-        fontSize: 10,
-        fontWeight: '400',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-        position: 'absolute',
-      },
-      ClosedContainer:{
-        width: 13,
-        height: 13,
-        top: 612, 
-        left: 228, 
-        borderWidth: 1,
-        background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-        borderColor: '#EEEEEE',
-        position: 'absolute',
-      },
-      ClosedText:{
-        width: 88,
-        top: -3, 
-        left: 19, 
-        color: 'black',
-        fontSize: 12,
-        fontWeight: '400',
-        letterSpacing: 0.02,
-        textAlign: 'left',
-        position: 'absolute',
-      },
-  });
+  AccessInfoContainer: {
+    // width: 94,
+    // height: 36,
+    // top: 488,
+    // left: 20,
+    // backgroundColor: 'white',
+    // position: 'absolute',
+  },
+  AccessInfoText: {
+    color: 'black',
+    fontSize: 14,
+    fontWeight: '400',
+    // fontWeight: 'bold',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+  },
+  PaymentInfoContainer: {
+    // width: 94,
+    // height: 36,
+    // top: 520,
+    // left: 20,
+    // backgroundColor: '',
+    // position: 'absolute',
+
+  },
+  PaymentInfoText: {
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '400',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    top: -68,
+  },
+  FreeContainer: {
+    width: 13,
+    height: 13,
+    top: 50,
+    left: 4,
+    borderWidth: 1,
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    borderColor: '#EEEEEE',
+    position: 'absolute',
+  },
+  FreeText: {
+    width: 88,
+    top: -4,
+    left: 19,
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '200',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    position: 'absolute',
+  },
+  PaidContainer: {
+    width: 12,
+    height: 13,
+    top: 50,
+    left: 60,
+    borderWidth: 1,
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    borderColor: '#EEEEEE',
+    position: 'absolute',
+  },
+  PaidText: {
+    width: 88,
+    top: -4,
+    left: 19,
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '200',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    position: 'absolute',
+  },
+  AccessRestrictionsContainer: {
+    width: 94,
+    // height: 36,
+    top: 70,
+    left: 1,
+    backgroundColor: 'white',
+    position: 'absolute',
+  }, 
+  AccessRestrictionsText: {
+    color: 'black',
+    fontSize: 10,
+    fontWeight: '500',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+  },
+  OpenforAllContainer: {
+    width: 13,
+    height: 13,
+    top: 90,
+    left: 6,
+    borderWidth: 1,
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    borderColor: '#EEEEEE',
+    position: 'absolute',
+  },
+  OpenforAllText: {
+    width: 88,
+    top: -2,
+    left: 19,
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '400',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    position: 'absolute',
+  },
+  RestrictedAccessContainer: {
+    width: 13,
+    height: 13,
+    top: 92,
+    left: 110,
+    borderWidth: 1,
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    borderColor: '#EEEEEE',
+    position: 'absolute',
+  },
+  RestrictedAccessText: {
+    width: 88,
+    top: -2,
+    left: 19,
+    color: 'black',
+    fontSize: 10.5,
+    fontWeight: '400',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    position: 'absolute',
+  },
+  ClosedContainer: {
+    width: 13,
+    height: 13,
+    top: 92,
+    left: 228,
+    borderWidth: 1,
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    borderColor: '#EEEEEE',
+    position: 'absolute',
+  },
+  ClosedText: {
+    width: 88,
+    top: -3,
+    left: 19,
+    color: 'black',
+    fontSize: 12,
+    fontWeight: '400',
+    letterSpacing: 0.02,
+    textAlign: 'left',
+    position: 'absolute',
+  },
+});
 export default AccessInfo;
