@@ -1,241 +1,105 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import InputComponent from '../atoms/InputComponent';
+import CheckboxComponent from '../atoms/CheckboxComponent';
 
 const AccessInfo = () => {
-  // eslint-disable-next-line no-shadow
-  const [AccessInfo, setAccessInfo] = useState('');
-  const [PaymentInfo, setPaymentInfo] = useState('');
-  const [Free, setFree] = useState('');
-  const [Paid, setPaid] = useState('');
-  const [AccessRestrictions, setAccessRestrictions] = useState('');
-  const [OpenforAll, setOpenforAll] = useState('');
-  const [RestrictedAccess, setRestrictedAccess] = useState('');
-  const [Closed, setClosed] = useState('');
-  
+  // const [AccessInfo, setAccessInfo] = useState('');
+  // const [PaymentInfo, setPaymentInfo] = useState('');
+  const [Free, setFree] = useState(false);
+  const [Paid, setPaid] = useState(false);
+  // const [AccessRestrictions, setAccessRestrictions] = useState('');
+  const [OpenforAll, setOpenforAll] = useState(false);
+  const [RestrictedAccess, setRestrictedAccess] = useState(false);
+  const [Closed, setClosed] = useState(false);
+
   return (
-    // eslint-disable-next-line react-native/no-inline-styles
-    <View style={{backgroundColor: 'white'}}>
-      {/* <Text style={styles.AccessInfoText}>Access Info</Text> */}
-      <View style={styles.AccessInfoContainer}>
-        <Text style={styles.AccessInfoText}>Access Info</Text>
-        <InputComponent
-          placeholder=" "
-          value={AccessInfo}
-          onChangeText={setAccessInfo}
-        />
-      </View>
-      <View style={styles.PaymentInfoContainer}>
-        <Text style={styles.PaymentInfoText}>Payment Info</Text>
-        <InputComponent
-          placeholder=" "
-          value={PaymentInfo}
-          onChangeText={setPaymentInfo}
-        />
-      </View>
-      <View style={styles.FreeContainer}>
-        <Text style={styles.FreeText}> Free</Text>
-        <InputComponent placeholder=" " value={Free} onChangeText={setFree} />
-      </View>
-      <View style={styles.PaidContainer}>
-        <Text style={styles.PaidText}>Paid</Text>
-        <InputComponent placeholder=" " value={Paid} onChangeText={setPaid} />
-      </View>
-      <View style={styles.AccessRestrictionsContainer}>
-        <Text style={styles.AccessRestrictionsText}>Access Restrictions</Text>
-        <InputComponent
-          placeholder=" "
-          value={AccessRestrictions}
-          onChangeText={setAccessRestrictions}
-        />
-      </View>
-      <View style={styles.OpenforAllContainer}>
-        <Text style={styles.OpenforAllText}> Open for All</Text>
-        <InputComponent
-          placeholder=" "
-          value={OpenforAll}
-          onChangeText={setOpenforAll}
-        />
-      </View>
-
-      <View style={styles.RestrictedAccessContainer}>
-        <Text style={styles.RestrictedAccessText}>Restricted Access</Text>
-        <InputComponent
-          placeholder=" "
-          value={RestrictedAccess}
-          onChangeText={setRestrictedAccess}
-        />
-      </View>
-
-      <View style={styles.ClosedContainer}>
-        <Text style={styles.ClosedText}> Closed</Text>
-        <InputComponent
-          placeholder=" "
-          value={Closed}
-          onChangeText={setClosed}
-        />
+    // <View style={{ backgroundColor: 'white' }}>
+    <View style={styles.container}>
+      <View style={styles.inputContainer1}>
+        <Text style={styles.inputLabel}>Access Info</Text>
+        <Text style={styles.inputLabel}>Payment Info</Text>
+        <View style={styles.inputContainer}>
+          <CheckboxComponent
+            label="Free"
+            checked={Free}
+            onPress={() => setFree(!Free)}
+            // style={styles.checkbox}
+          />
+          <Text style={styles.label}>Free</Text>
+          <CheckboxComponent
+            label="Paid"
+            checked={Paid}
+            onPress={() => setPaid(!Paid)}
+          />
+          <Text style={styles.label}>Paid</Text>
+        </View>
+        <View style={styles.inputContainer2}>
+          <Text style={styles.inputLabel}>Access Restrictions</Text>
+          <View style={styles.inputContainer}>
+            <CheckboxComponent
+              label="Open for All"
+              checked={OpenforAll}
+              onPress={() => setOpenforAll(!OpenforAll)}
+            />
+            <Text style={styles.label3}>OpenforAll</Text>
+            <CheckboxComponent
+              label="Restricted Access"
+              checked={RestrictedAccess}
+              onPress={() => setRestrictedAccess(!RestrictedAccess)}
+            />
+            <Text style={styles.label4}>RestrictedAccess</Text>
+            <CheckboxComponent
+              label="Closed"
+              checked={Closed}
+              onPress={() => setClosed(!Closed)}
+            />
+            <Text style={styles.label5}>Closed</Text>
+          </View>
+        </View>
       </View>
     </View>
   );
 };
-const styles = StyleSheet.create({
-  AccessInfoContainer: {
-    // width: 94,
-    // height: 36,
-    // top: 488,
-    // left: 20,
-    // backgroundColor: 'white',
-    // position: 'absolute',
-  },
-  AccessInfoText: {
-    color: 'black',
-    fontSize: 14,
-    fontWeight: '400',
-    // fontWeight: 'bold',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-  },
-  PaymentInfoContainer: {
-    // width: 94,
-    // height: 36,
-    // top: 520,
-    // left: 20,
-    // backgroundColor: '',
-    // position: 'absolute',
 
-  },
-  PaymentInfoText: {
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    top: -68,
-  },
-  FreeContainer: {
-    width: 13,
-    height: 13,
-    top: 50,
-    left: 4,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  FreeText: {
-    width: 88,
-    top: -4,
-    left: 19,
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '200',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-  PaidContainer: {
-    width: 12,
-    height: 13,
-    top: 50,
-    left: 60,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  PaidText: {
-    width: 88,
-    top: -4,
-    left: 19,
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '200',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-  AccessRestrictionsContainer: {
-    width: 94,
-    // height: 36,
-    top: 70,
-    left: 1,
+const styles = StyleSheet.create({
+  container: {
+
     backgroundColor: 'white',
-    position: 'absolute',
-  }, 
-  AccessRestrictionsText: {
-    color: 'black',
-    fontSize: 10,
-    fontWeight: '500',
-    letterSpacing: 0.02,
-    textAlign: 'left',
+    padding: 10,
   },
-  OpenforAllContainer: {
-    width: 13,
-    height: 13,
-    top: 90,
-    left: 6,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
+  inputContainer1: {
+    marginBottom: 40,
   },
-  OpenforAllText: {
-    width: 88,
-    top: -2,
-    left: 19,
+  inputContainer2:{
+    marginBottom: 20,
+    top: -20,
+  },
+  inputContainer:{
+    flexDirection: 'row',
+    marginBottom: 20,
+    marginLeft: -20,
+    // flex:1,
+  },
+  inputLabel: {
     color: 'black',
-    fontSize: 12,
+    fontStyle: 'normal',
+    fontSize: 15,
     fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
   },
-  RestrictedAccessContainer: {
-    width: 13,
-    height: 13,
-    top: 92,
-    left: 110,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
+  label:{
+    margin: -33,
+    // flex:1,
   },
-  RestrictedAccessText: {
-    width: 88,
-    top: -2,
-    left: 19,
-    color: 'black',
-    fontSize: 10.5,
-    fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
+  label3:{
+    margin: -52,
+    marginLeft:-55,
   },
-  ClosedContainer: {
-    width: 13,
-    height: 13,
-    top: 92,
-    left: 228,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  ClosedText: {
-    width: 88,
-    top: -3,
-    left: 19,
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
-  },
+  label4:{
+    margin: -80,
+    marginLeft:-70,
+   
+  }
+  
 });
+
 export default AccessInfo;

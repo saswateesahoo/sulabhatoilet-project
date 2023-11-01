@@ -29,7 +29,7 @@ const PhotoUpload = () => {
         style={{
           width: 150,
           height: 60,
-          top: -70,
+          top: 20,
           left: 28,
           color: 'black',
           fontSize: 17,
@@ -43,7 +43,7 @@ const PhotoUpload = () => {
       
       <Image
         source={require('../assets/Rectangle.jpg')}
-        style={{ width: 65, height: 65, margin: 10,top: -91,left:20 }}
+        style={{ width: 65, height: 65, margin: 10,top: -11,left:20 }}
       />
       <InputComponent
         placeholder=""
@@ -57,18 +57,18 @@ const PhotoUpload = () => {
           style={{
             width: 280,
             height: 46,
-            top: -150,
+            top: -80,
             left: 40,
-            color: 'black',
+            borderColor: '#EBECF0',
             borderRadius: 0,
             borderWidth: 1,
             fontSize: 12,
             fontWeight: '300',
             letterSpacing: 0.02,
             textAlign: 'left',
-          }}
-        >
-          <Text style={{ color: 'black', textAlign: 'center' ,top:12}}>
+            background: '#FFF',
+          }}>
+          <Text style={{color: 'black', textAlign: 'center', top: 12}}>
             Add Photos for verification
           </Text>
         </View>

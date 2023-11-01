@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
   AmmenitiesAvailableContainer: {
     // width: 94,
     // height: 36,
-    // top: 310, 
-    // left: 30, 
+    top: 20, 
+    left: 1, 
     // backgroundColor: 'white',
     // position: 'absolute',
    
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     color: 'black',
     fontSize: 14,
     fontWeight: '400',
-    letterSpacing: 0.02,
+    letterSpacing: 0.24,
     textAlign: 'left',
     // top: 10,
     // left: -10,
@@ -96,16 +96,17 @@ const styles = StyleSheet.create({
   ParkingFacilityContainer:{
     width: 13,
     height: 13,
-    top: -56, 
+    top: -20, 
     left: 10, 
     borderWidth: 1,
-    background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    background:
+      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
     borderColor: '#EEEEEE',
     position: 'absolute',
   },
   ParkingFacilityText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 12,
@@ -117,7 +118,7 @@ const styles = StyleSheet.create({
   ShoppingMallContainer:{
     width: 13,
     height: 13,
-    top: -56, 
+    top: -20, 
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -126,7 +127,7 @@ const styles = StyleSheet.create({
   },
   ShoppingMallText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 12,
@@ -138,7 +139,7 @@ const styles = StyleSheet.create({
   DrinkingWaterContainer:{
     width: 13,
     height: 13,
-    top: -36, 
+    top: 10, 
     left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
   },
   DrinkingWaterText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 12,
@@ -159,7 +160,7 @@ const styles = StyleSheet.create({
   EVChargingUnitContainer:{
     width: 13,
     height: 13,
-    top: -35, 
+    top: 10,
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
   },
   EVChargingUnitText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 11,
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
   FoodOutletsContainer:{
     width: 13,
     height: 13,
-    top: -20, 
+    top: 40, 
     left: 10, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
   },
   FoodOutletsText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 12,
@@ -201,7 +202,7 @@ const styles = StyleSheet.create({
   ShowerRoomsContainer:{
     width: 13,
     height: 13,
-    top: -20, 
+    top: 40, 
     left: 125, 
     borderWidth: 1,
     background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
@@ -210,7 +211,7 @@ const styles = StyleSheet.create({
   },
   ShowerRoomsText:{
     width: 88,
-    top: -1, 
+    top: -3, 
     left: 19, 
     color: 'black',
     fontSize: 12,

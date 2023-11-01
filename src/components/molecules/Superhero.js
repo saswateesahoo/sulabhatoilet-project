@@ -9,12 +9,13 @@ const Superhero = () => {
           style={styles.additionalImage}
       />
       </View>
-   
       <View>
         <Text style={styles.SuperHeroText}>You are a Super Hero !</Text>
         <Text style={styles.contributeText}>
-          You are now going to contribute to build the world's largest toilet
-          network. My toilet relies on superheroes like you.
+          {/* You are now going to contribute to build the world's largest toilet
+          network. My toilet relies on superheroes like you. */}
+          You are now going to contribute to build world’s largest toilet
+          network My Toilet relies on superhero like you.
         </Text>
       </View>
     </View>
@@ -50,13 +51,14 @@ const styles = StyleSheet.create({
   },
   SuperHeroText: {
     // width: 190,
-    // top: -330,
+    top: -10,
     // left: -1,
     color: '#11C6FF',
-    // fontFamily: 'Poppins',
-    // fontSize: 18,
-    // fontWeight: '400',
-    // letterSpacing: 0.04,
+    fontFamily: 'Poppins',
+    fontSize: 18,
+    fontWeight: '600',
+    fontStyle: 'normal',
+    letterSpacing: 0.72,
     // backgroundColor: '#11C6FF',
     // position: 'absolute',
   },

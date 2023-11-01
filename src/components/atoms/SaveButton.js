@@ -1,7 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
-const SaveButton = ({ onPress }) => {
+const SaveButton = ({onPress}) => {
   return (
     <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>Save</Text>
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   button: {
     width: 303, 
     height: 50, 
-    top: -70,
+    top: -8,
     left:22,
     backgroundColor: '#2400FF',
     borderRadius: 5, 

@@ -1,4 +1,4 @@
-import { Input } from '@rneui/themed';
+import {Input} from '@rneui/themed';
 
 const InputComponent = ({placeholder, value, onChangeText}) => {
   return (
@@ -6,7 +6,8 @@ const InputComponent = ({placeholder, value, onChangeText}) => {
       placeholder={placeholder}
       value={value}
       onChangeText={onChangeText}
-        />
+    />
   )
 }
 export default InputComponent;
+
