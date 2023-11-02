@@ -57,7 +57,7 @@ const PhotoUpload = () => {
           style={{
             width: 280,
             height: 46,
-            top: -80,
+            top: -50,
             left: 40,
             borderColor: '#EBECF0',
             borderRadius: 0,

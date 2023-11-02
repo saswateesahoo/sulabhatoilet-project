@@ -26,19 +26,19 @@ const WomenCentricServices = () => {
         </View>
         <View style={styles.inputContainer2}>
           <View style={styles.inputContainer}>
-          <CustomCheckboxComponent
-            label="Baby Feeding Room"
-            checked={BabyFeedingRoom}
-            onPress={() => setBabyFeedingRoom(!BabyFeedingRoom)}
+            <CustomCheckboxComponent
+              label="Baby Feeding Room"
+              checked={BabyFeedingRoom}
+              onPress={() => setBabyFeedingRoom(!BabyFeedingRoom)}
+            />
+            <CustomCheckboxComponent
+              label="Changing Room "
+              checked={ChangingRoom}
+              onPress={() => setChangingRoom(!ChangingRoom)}
           />
-          <CustomCheckboxComponent
-            label="Changing Room "
-            checked={ChangingRoom}
-            onPress={() => setChangingRoom(!ChangingRoom)}
-          />
+          </View>
         </View>
       </View>
-    </View>
      </View>
   );
 };

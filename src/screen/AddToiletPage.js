@@ -35,6 +35,7 @@ import AccessInfo from '../components/molecules/AccessInfo';
 import AmmenitiesAvailable from '../components/molecules/AmmenitiesAvailable';
 import PhotoUpload from '../components/molecules/PhotoUpload';
 import SaveButton from '../components/atoms/SaveButton';
+import AddToiletButton from '../components/atoms/AddToiletButton';
 const AddToiletPage = () => {
   return (
     <View
@@ -43,6 +44,7 @@ const AddToiletPage = () => {
         height: '100%',
         flexDirection: 'column',
       }}>
+      <AddToiletButton />
       <ScrollView> 
         <Superhero />
         <BasicInformation />

@@ -3,8 +3,6 @@ import {View, Text, StyleSheet} from 'react-native';
 import InputComponent from '../atoms/InputComponent';
 import CustomCheckboxComponent from '../atoms/CustomCheckboxComponent';
 
-// import { Input } from '@rneui/themed';
-
 const BasicInformation = () => {
   const [toiletName, setToiletName] = useState('');
   const [toiletAddress, setToiletAddress] = useState('');
@@ -313,7 +311,7 @@ const styles = StyleSheet.create({
     width: 24,
     height: 26,
     top: -38,
-    left: 216,
+    left: 208,
     // borderRadius: 4,
     // borderWidth: 1,
     // background:
@@ -324,7 +322,7 @@ const styles = StyleSheet.create({
   HourOpenText: {
     width: 80,
     top: 2,
-    left: 39,
+    left: 49,
     color: 'black',
     fontSize: 12,
     fontWeight: '300',

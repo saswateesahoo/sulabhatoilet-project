@@ -4,7 +4,7 @@ const Superhero = () => {
   return (
     <View style={styles.container}>
       <View style={styles.imageBox}>
-      <Image
+        <Image
           source={require('../assets/superhero.jpg')}
           style={styles.additionalImage}
       />
@@ -34,9 +34,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 12,
-    width: 96,
+    width: 83,
     height: 96,
-    borderRadius:8
+    borderRadius:8,
   },
   additionalImage: {
     // width: 87,
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
   contributeText: {
     color: '#1E1E1E',
     marginTop: 8,
-    fontSize: 12,
+    fontSize: 13,
     fontWeight: '400',
     letterSpacing: 0.02
 
