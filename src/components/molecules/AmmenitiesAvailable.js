@@ -14,7 +14,7 @@ const AmmenitiesAvailable = () => {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer1}>
-        <Text style={styles.inputLabel}>Ammenities Available </Text>
+        <Text style={styles.inputLabel1}>Ammenities Available </Text>
         <View style={styles.inputContainer}>
           <CustomCheckboxComponent
             label="Parking Facility"
@@ -76,21 +76,48 @@ const styles = StyleSheet.create({
   inputContainer3: {
     marginBottom: -20,
     top: 40,
-    left: -249,
+    left: -239,
   },
   inputContainer: {
     flexDirection: 'row',
     marginBottom: 20,
     marginLeft: -20,
-    
+
+  },
+  inputLabel1: {
+    color: '#000',
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 20, 
+    marginBottom:18,
+    letterSpacing: 0.28,
+    left:12,
   },
   inputLabel: {
-    color: 'black',
+    color: '#000',
+    fontFamily: 'Poppins',
+    fontSize: 12,
     fontStyle: 'normal',
-    fontSize: 15,
-    fontWeight: '400',
-    marginBottom:12,
+    fontWeight: '300',
+    lineHeight: 0, 
+    letterSpacing: 0.24,
+    marginBottom: 12,
+    left:16,
   },
+  // inputLabel3:{
+  //   color: '#000',
+  //   fontFamily: 'Poppins',
+  //   fontSize: 12,
+  //   fontStyle: 'normal',
+  //   fontWeight: '300',
+  //   lineHeight: 0, 
+  //   letterSpacing: 0.24,
+  //   marginBottom: 12,
+  //   left:16,
+  // },
+
 });
 
 export default AmmenitiesAvailable;
