@@ -1,170 +1,72 @@
-import React,{useState} from 'react';
-import { View, Text,StyleSheet } from 'react-native';
-import InputComponent from '../atoms/InputComponent';
-
+import React, {useState} from 'react';
+import {View, Text, StyleSheet} from 'react-native';
+import CustomCheckboxComponent from '../atoms/CustomCheckboxComponent';
 
 const WomenCentricServices = () => {
-  const [WomenCentricServices, setWomenCentricServices] = useState('');
-  const [SanitaryPadBin, setSanitaryPadBin] = useState('');
-  const [CanBuySanitaryPad, setCanBuySanitaryPad] = useState('');
-  const [BabyFeedingRoom, setBabyFeedingRoom] = useState('');
-  const [ChangingRoom, setChangingRoom] = useState('');
+  const [SanitaryPadBin, setSanitaryPadBin] = useState(false);
+  const [CanBuySanitaryPad, setCanBuySanitaryPad] = useState(false);
+  const [BabyFeedingRoom, setBabyFeedingRoom] = useState(false);
+  const [ChangingRoom, setChangingRoom] = useState(false);
   
   return (
-    <View style={{backgroundColor: 'white'}}>
-      {/* <Text style={styles.WomenCentricServicesText}>Women Centric Services</Text> */}
-      <View style={styles.WomenCentricServicesContainer}>
-        <Text style={styles.WomenCentricServicesText}>
-          Women Centric Services
-        </Text>
-        <InputComponent
-          placeholder=" "
-          value={WomenCentricServices}
-          onChangeText={setWomenCentricServices}
-        />
+    <View style={styles.container}>
+      <View style={styles.inputContainer1}>
+        <Text style={styles.inputLabel}>Women Centric Services </Text>
+        <View style={styles.inputContainer}>
+          <CustomCheckboxComponent
+            label="Sanitary Pad Bin"
+            checked={SanitaryPadBin}
+            onPress={() => setSanitaryPadBin(!SanitaryPadBin)}
+          />
+          <CustomCheckboxComponent
+            label="Can Buy Sanitary Pad "
+            checked={CanBuySanitaryPad}
+            onPress={() => setCanBuySanitaryPad(!CanBuySanitaryPad)}
+          />
+        </View>
+        <View style={styles.inputContainer2}>
+          <View style={styles.inputContainer}>
+            <CustomCheckboxComponent
+              label="Baby Feeding Room"
+              checked={BabyFeedingRoom}
+              onPress={() => setBabyFeedingRoom(!BabyFeedingRoom)}
+            />
+            <CustomCheckboxComponent
+              label="Changing Room "
+              checked={ChangingRoom}
+              onPress={() => setChangingRoom(!ChangingRoom)}
+            />
+          </View>
+        </View>
       </View>
-      <View style={styles.SanitaryPadBinContainer}>
-        <Text style={styles.SanitaryPadBinText}> Sanitary Pad Bin</Text>
-        <InputComponent
-          placeholder=" "
-          value={SanitaryPadBin}
-          onChangeText={setSanitaryPadBin}
-        />
-      </View>
-      <View style={styles.CanBuySanitaryPadContainer}>
-        <Text style={styles.CanBuySanitaryPadText}> Can Buy Sanitary Pad</Text>
-        <InputComponent
-          placeholder=" "
-          value={CanBuySanitaryPad}
-          onChangeText={setCanBuySanitaryPad}
-        />
-      </View>
-      <View style={styles.BabyFeedingRoomContainer}>
-        <Text style={styles.BabyFeedingRoomText}>Baby Feeding Room</Text>
-        <InputComponent
-          placeholder=" "
-          value={BabyFeedingRoom}
-          onChangeText={setBabyFeedingRoom}
-        />
-      </View>
-      <View style={styles.ChangingRoomContainer}>
-        <Text style={styles.ChangingRoomText}>Changing Room</Text>
-        <InputComponent
-          placeholder=" "
-          value={ChangingRoom}
-          onChangeText={setChangingRoom}
-        />
-       </View>
     </View>
   );
 };
+
 const styles = StyleSheet.create({
-WomenCentricServicesContainer:{
-    // width: 94,
-    // height: 36,
-    top: 20, 
-    left: 1, 
-    // backgroundColor: 'white',
-    // position: 'absolute',
-   
+  container: {
+    backgroundColor: 'white',
+    padding: 10,
   },
-  WomenCentricServicesText:{
+  inputContainer1: {
+    marginTop: -120,
+  },
+  inputContainer2: {
+    marginBottom: 20,
+    top: -20,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    marginBottom: 20,
+    marginLeft: -20,
+  },
+  inputLabel: {
     color: 'black',
-    fontSize: 14,
+    fontStyle: 'normal',
+    fontSize: 15,
     fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    top: -70,
-    left:12,
-    // lineHeight:0,
-  },
-  SanitaryPadBinContainer:{
-    width: 13,
-    height: 13,
-    top: -20, 
-    left: 10, 
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  SanitaryPadBinText:{
-    width: 88,
-    top: -3, 
-    left: 19, 
-    color: 'black',
-    fontSize: 11,
-    fontWeight: '400',
-    letterSpacing: 0.24,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-  CanBuySanitaryPadContainer:{
-    width: 13,
-    height: 13,
-    top: -20, 
-    left: 138, 
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  CanBuySanitaryPadText:{
-    width: 88,
-    top: -3, 
-    left: 19, 
-    color: 'black',
-    fontSize: 8.6,
-    fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-  BabyFeedingRoomContainer:{
-    width: 13,
-    height: 13,
-    top: 7, 
-    left: 10, 
-    borderWidth: 1,
-    background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  BabyFeedingRoomText:{
-    width: 88,
-    top: -1, 
-    left: 19, 
-    color: 'black',
-    fontSize: 9,
-    fontWeight: '400',
-    letterSpacing: 0.24,
-    textAlign: 'left',
-    position: 'absolute',
-  },
-  ChangingRoomContainer:{
-    width: 13,
-    height: 13,
-    top: 7, 
-    left: 138, 
-    borderWidth: 1,
-    background: 'linear-gradient(0deg, #EEEEEE, #EEEEEE), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EEEEEE',
-    position: 'absolute',
-  },
-  ChangingRoomText:{
-    width: 88,
-    top: -1, 
-    left: 19, 
-    color: 'black',
-    fontSize: 12,
-    fontWeight: '400',
-    letterSpacing: 0.02,
-    textAlign: 'left',
-    position: 'absolute',
+    marginBottom:12,
   },
 });
 
 export default WomenCentricServices;
-
