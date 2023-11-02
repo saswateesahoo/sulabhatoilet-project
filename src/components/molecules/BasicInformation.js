@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import InputComponent from '../atoms/InputComponent';
+import CustomCheckboxComponent from '../atoms/CustomCheckboxComponent';
+
 // import { Input } from '@rneui/themed';
 
 const BasicInformation = () => {
@@ -87,10 +89,10 @@ const BasicInformation = () => {
 
       <View style={styles.HourOpenContainer}>
         <Text style={styles.HourOpenText}>24 Hours Open</Text>
-        <InputComponent
-          placeholder=" "
-          value={is24HoursOpen.toString()}
-          onChangeText={text => setIs24HoursOpen(text === 'true')}
+        <CustomCheckboxComponent
+          title="24 Hours Open"
+          checked={is24HoursOpen}
+          onPress={() => setIs24HoursOpen(!is24HoursOpen)}
         />
       </View>
       <View style={styles.TypeofToiletContainer}>
@@ -310,19 +312,19 @@ const styles = StyleSheet.create({
   HourOpenContainer: {
     width: 24,
     height: 26,
-    top: -40,
-    left: 225,
-    borderRadius: 4,
-    borderWidth: 1,
-    background:
-      'linear-gradient(0deg, #EBECF0, #EBECF0), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
-    borderColor: '#EBECF0',
-    position: 'relative',
+    top: -38,
+    left: 216,
+    // borderRadius: 4,
+    // borderWidth: 1,
+    // background:
+    //   'linear-gradient(0deg, #EBECF0, #EBECF0), linear-gradient(0deg, #FFFFFF, #FFFFFF)',
+    // borderColor: '#EBECF0',
+    // position: 'relative',
   },
   HourOpenText: {
-    width: 88,
+    width: 80,
     top: 2,
-    left: 29,
+    left: 39,
     color: 'black',
     fontSize: 12,
     fontWeight: '300',
