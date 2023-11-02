@@ -44,15 +44,13 @@ const AddToiletPage = () => {
         flexDirection: 'column',
       }}>
       <ScrollView> 
-
-      <Superhero /> 
-      <BasicInformation /> 
-      <AccessInfo />
-      <WomenCentricServices /> 
-      <AmmenitiesAvailable/>
-      <PhotoUpload/>
-      <SaveButton/>
-
+        <Superhero />
+        <BasicInformation />
+        <AccessInfo />
+        <WomenCentricServices />
+        <AmmenitiesAvailable />
+        <PhotoUpload />
+        <SaveButton />
       </ScrollView>   
     </View>
   );
