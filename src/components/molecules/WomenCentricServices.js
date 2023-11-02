@@ -35,11 +35,11 @@ const WomenCentricServices = () => {
               label="Changing Room "
               checked={ChangingRoom}
               onPress={() => setChangingRoom(!ChangingRoom)}
-          />
+            />
           </View>
         </View>
       </View>
-     </View>
+    </View>
   );
 };
 
@@ -49,17 +49,20 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   inputContainer1: {
-    marginTop: -120,
+    marginTop: -100,
   },
   inputContainer2: {
-    marginBottom: 20,
+    marginBottom: -30,
     top: -20,
-    marginLeft: 2,
+    marginLeft: 0,
   },
   inputContainer: {
     flexDirection: 'row',
     marginBottom: 20,
-    marginLeft: -20,
+    marginLeft: -10,
+
+    // alignItems: 'center', 
+   
   },
   inputLabel: {
     color: '#000',

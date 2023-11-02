@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { View, Text, Button, Image, TouchableOpacity } from 'react-native';
+import React, {useState} from 'react';
+import {View, Text, Button, Image, TouchableOpacity} from 'react-native';
 import InputComponent from '../atoms/InputComponent';
 import DocumentPicker from 'react-native-document-picker';
 
@@ -43,15 +43,9 @@ const PhotoUpload = () => {
       
       <Image
         source={require('../assets/Rectangle.jpg')}
-        style={{ width: 65, height: 65, margin: 10,top: -11,left:20 }}
+        style={{width: 65, height: 65, margin: 10, top: -11, left: 20}}
       />
-      <InputComponent
-        placeholder=""
-        value={null}
-        onChangeText={(text) => {
-          
-        }}
-      />
+      <InputComponent placeholder="" value={null} onChangeText={text => {}} />
       <TouchableOpacity onPress={handleUploadPhoto}>
         <View
           style={{

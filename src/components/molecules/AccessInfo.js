@@ -58,10 +58,12 @@ const styles = StyleSheet.create({
   },
   inputContainer1: {
     marginBottom: 40,
+    marginLeft:10,
   },
   inputContainer2: {
     marginBottom: 20,
     top: -20,
+    
   },
   inputContainer: {
     flexDirection: 'row',
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
     lineHeight: 20, 
     marginBottom: 18,
     letterSpacing: 0.24,
-    left:12,
+    left: 8,
   },
 });
 
