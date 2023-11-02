@@ -46,6 +46,7 @@ const AmmenitiesAvailable = () => {
                   checked={FoodOutlets}
                   onPress={() => setFoodOutlets(!FoodOutlets)}
                 />
+
                 <CustomCheckboxComponent
                   label="Shower Rooms"
                   checked={ShowerRooms}
@@ -78,6 +79,11 @@ const styles = StyleSheet.create({
     top: 40,
     left: -239,
   },
+  inputContainer4:{
+    marginBottom: -20,
+    top: 40,
+    left: -249,
+  },
   inputContainer: {
     flexDirection: 'row',
     marginBottom: 20,
@@ -91,10 +97,11 @@ const styles = StyleSheet.create({
     fontStyle: 'normal',
     fontWeight: '400',
     lineHeight: 20, 
-    marginBottom:18,
+    marginBottom: 18,
     letterSpacing: 0.28,
     left:12,
   },
+  
   inputLabel: {
     color: '#000',
     fontFamily: 'Poppins',
@@ -106,17 +113,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     left:16,
   },
-  // inputLabel3:{
-  //   color: '#000',
-  //   fontFamily: 'Poppins',
-  //   fontSize: 12,
-  //   fontStyle: 'normal',
-  //   fontWeight: '300',
-  //   lineHeight: 0, 
-  //   letterSpacing: 0.24,
-  //   marginBottom: 12,
-  //   left:16,
-  // },
+
 
 });
 

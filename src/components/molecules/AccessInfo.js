@@ -27,7 +27,7 @@ const AccessInfo = () => {
           />
         </View>
         <View style={styles.inputContainer2}>
-          <Text style={styles.inputLabel}>Access Restrictions</Text>
+          <Text style={styles.inputLabel1}>Access Restrictions</Text>
           <View style={styles.inputContainer}>
             <CustomCheckboxComponent
               label="Open for All"
@@ -74,6 +74,17 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '400',
     marginBottom:12,
+  },
+  inputLabel1:{
+    color: '#000',
+    fontFamily: 'Poppins',
+    fontSize: 12,
+    fontStyle: 'normal',
+    fontWeight: '400',
+    lineHeight: 20, 
+    marginBottom: 18,
+    letterSpacing: 0.24,
+    left:12,
   },
 });
 

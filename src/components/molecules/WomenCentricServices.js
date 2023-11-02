@@ -11,7 +11,7 @@ const WomenCentricServices = () => {
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer1}>
-        <Text style={styles.inputLabel}>Women Centric Services </Text>
+        <Text style={styles.inputLabel1}>Women Centric Services </Text>
         <View style={styles.inputContainer}>
           <CustomCheckboxComponent
             label="Sanitary Pad Bin"
@@ -26,20 +26,20 @@ const WomenCentricServices = () => {
         </View>
         <View style={styles.inputContainer2}>
           <View style={styles.inputContainer}>
-            <CustomCheckboxComponent
-              label="Baby Feeding Room"
-              checked={BabyFeedingRoom}
-              onPress={() => setBabyFeedingRoom(!BabyFeedingRoom)}
-            />
-            <CustomCheckboxComponent
-              label="Changing Room "
-              checked={ChangingRoom}
-              onPress={() => setChangingRoom(!ChangingRoom)}
-            />
-          </View>
+          <CustomCheckboxComponent
+            label="Baby Feeding Room"
+            checked={BabyFeedingRoom}
+            onPress={() => setBabyFeedingRoom(!BabyFeedingRoom)}
+          />
+          <CustomCheckboxComponent
+            label="Changing Room "
+            checked={ChangingRoom}
+            onPress={() => setChangingRoom(!ChangingRoom)}
+          />
         </View>
       </View>
     </View>
+     </View>
   );
 };
 
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
   inputContainer2: {
     marginBottom: 20,
     top: -20,
+    marginLeft: 2,
   },
   inputContainer: {
     flexDirection: 'row',
@@ -61,11 +62,26 @@ const styles = StyleSheet.create({
     marginLeft: -20,
   },
   inputLabel: {
-    color: 'black',
+    color: '#000',
+    fontFamily: 'Poppins',
+    fontSize: 12,
     fontStyle: 'normal',
-    fontSize: 15,
+    fontWeight: '300',
+    lineHeight: 0, 
+    letterSpacing: 0.24,
+    marginBottom: 12,
+    left: 16,
+  },
+  inputLabel1:{
+    color: '#000',
+    fontFamily: 'Poppins',
+    fontSize: 14,
+    fontStyle: 'normal',
     fontWeight: '400',
-    marginBottom:12,
+    lineHeight: 20, 
+    marginBottom:18,
+    letterSpacing: 0.28,
+    left:12,
   },
 });
 

@@ -30,13 +30,14 @@ const styles = StyleSheet.create({
   },
   checkmark: {
     color: 'green',
-    fontSize: 20,
+    fontSize: 12,
   },
   label: {
     color: 'black',
     fontSize: 15,
     marginLeft: 10,
     left: 12,
+    // justifyContent:'space-between',
   },
 });
 
